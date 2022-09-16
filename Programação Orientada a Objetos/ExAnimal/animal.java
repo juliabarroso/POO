@@ -1,74 +1,40 @@
 package POO;
 
-public class animal {
+public abstract class animal {
 
-	
-	//atributos
-	private String nome;
-	private int idade;
-	private String origem;
-	private String som;
+        //atributos
+        protected String nome;
+        protected int idade;
 
-	//construtor
-	public animal(String nome, int idade, String origem, String som){
-		
-		this.nome = nome;
-		this.idade = idade;
-		this.origem = origem;
-		this.som = som;
-	}
+        public animal(String nome, int idade) {
+            super();
+            this.nome = nome;
+            this.idade = idade;
+        }
 
-	
-	
-	public String getNome() {
-		return nome;
-	}
+        //métodos
+        abstract public void emitirSom(String emitirSom);
+        abstract public void deslocamento(String deslocamento);
 
+        public String getNome() {
+            return nome;
+        }
 
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+        public int getIdade() {
+            return idade;
+        }
 
-
-
-	public int getIdade() {
-		return idade;
-	}
+        public void setIdade(int idade) {
+            this.idade = idade;
+        }
 
 
 
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
 
 
 
-	public String getOrigem() {
-		return origem;
-	}
-
-
-
-	public void setOrigem(String origem) {
-		this.origem = origem;
-	}
-
-
-
-	public String getSom() {
-		return som;
-	}
-
-
-
-	public void setSom(String som) {
-		this.som = som;
-	}
-
-
-
-	
-	
-	
 }
