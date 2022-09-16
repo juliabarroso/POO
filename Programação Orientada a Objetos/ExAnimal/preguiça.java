@@ -1,45 +1,26 @@
 package POO;
 
-public class preguiça extends animal {
-	
-	//atributos
-	private String deslocamento;
-	
-	
-	//construtor
-	public preguiça(String nome, int idade, String origem, String som, String deslocamento) {
-		
-		super(nome, idade, origem, som);
-		this.deslocamento = deslocamento;
-	}//fim do construtor
+public class preguiça extends animal{
 
+    public Preguiça(String nome, int idade) {
+        super(nome, idade);
+        this.nome = nome;
+        this.idade = idade;
+    }
 
-	//métodos
-	public String getDeslocamento() {
-		return deslocamento;
-	}
+    @Override
+    public void emitirSom(String emitirSom) {
+        System.out.println("\nO bicho preguiça emite um som discreto");
+    }
 
+    @Override
+    public void deslocamento(String deslocamento) {
+        System.out.println("O bicho preguiça sobe árvores");
+    }
 
-	public void setDeslocamento(String deslocamento) {
-		this.deslocamento = deslocamento;
-	}
-	
-	
-	public void imprimirPre() {
-		System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nOrigem do animal: " + getOrigem() +
-		"\nEmite som?: " + getSom() + "\nDeslocamento: " + deslocamento);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
-	
+    public void imprimirP(String emitirSom, String deslocamento) {
+        System.out.println("\nNome: " + getNome() + "\nIdade: " + getIdade() + "\nSom emitido: " + emitirSom + 
+        "\nDeslocamento: " + deslocamento);
+    }
 
 }
